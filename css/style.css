@@ -1,0 +1,23 @@
+.wrapper{
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(4, auto);
+    gap: 10px;
+    align-items: center;
+    border: solid white;
+}
+.block {
+    background-color: #8ca0ff;
+    width: 100px;
+    height: 100px;
+}
+body{
+    background-color: black;
+}
+.sidebar{
+    background-color: blueviolet;
+    width: 100px;
+    height: 325px;
+  
+}
