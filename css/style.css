@@ -1,23 +1,61 @@
 .wrapper{
-    justify-content: center;
+    margin: auto;
     display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(4, 200px) ;
+    grid-template-rows: repeat(3, 200px);
     gap: 10px;
-    align-items: center;
-    border: solid white;
+    justify-content: center;
 }
-.block {
-    background-color: #8ca0ff;
-    width: 100px;
-    height: 100px;
+.block1 {
+    background-color: white;
+    grid-column: 2/2;
+    grid-row: 1/1;
+}
+.block2 {
+    background-color:white;
+    grid-column: 3/3;
+    grid-row: 1/1;
+}
+.block3 {
+    background-color: white;
+    grid-column: 4/4;
+    grid-row: 1/1;
+}
+.block4 {
+    background-color: white;
+    grid-column: 2/2;
+    grid-row: 2/2;
+}
+.block5 {
+    background-color: white;
+    grid-column: 3/3;
+    grid-row: 2/2;
+}
+.block6 {
+    background-color: white;
+    grid-column: 4/4;
+    grid-row: 2/2;
+}
+.block7 {
+    background-color: white;
+    grid-column: 2/2;
+    grid-row: 3/3;
+}
+.block8 {
+    background-color: white;
+    grid-column: 3/3;
+    grid-row: 3/3;
+}
+.block9 {
+    background-color: #ffffff;
+    grid-column: 4/4;
+    grid-row: 3/3;
 }
 body{
     background-color: black;
 }
 .sidebar{
-    background-color: blueviolet;
-    width: 100px;
-    height: 325px;
-  
+    background-color: white;
+    grid-column: 1/2;
+    grid-row: 1/4;
 }
