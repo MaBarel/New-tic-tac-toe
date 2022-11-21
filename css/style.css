@@ -64,6 +64,11 @@ body{
     justify-content: center;
     align-items: center;
     position: relative;
+    cursor: pointer;
+}
+
+.blockx, .blocko{
+    cursor: not-allowed;
 }
 .blockx::before,
 .blockx::after{
