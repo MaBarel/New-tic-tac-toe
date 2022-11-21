@@ -79,3 +79,19 @@ background-color: black;
 .blockx::after{
     transform: rotate(-45deg);
 }
+.blocko::before,
+.blocko::after{
+content: "";
+border-radius: 50%;
+position: absolute;
+}
+.blocko::before{
+    width: 180px;
+    height: 180px;
+    background-color: black;
+}
+.blocko::after{
+    width: 140px;
+    height: 140px;
+    background-color: white;
+}
