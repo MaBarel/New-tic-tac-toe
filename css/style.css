@@ -59,3 +59,23 @@ body{
     grid-column: 1/2;
     grid-row: 1/4;
 }
+.block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.blockx::before,
+.blockx::after{
+content: "";
+width: 30px;
+position: absolute;
+height: 180px;
+background-color: black;
+}
+.blockx::before{
+    transform: rotate(45deg);
+}
+.blockx::after{
+    transform: rotate(-45deg);
+}
