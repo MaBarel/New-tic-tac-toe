@@ -100,3 +100,31 @@ position: absolute;
     height: 140px;
     background-color: white;
 }
+.winningMessage{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .9);
+    justify-content: center;
+    color: white;
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5rem;
+    flex-direction: column;
+}
+.winningMessage button{
+    font-size: 3rem;
+    background-color: white;
+    content: "Restart";
+    border: 1px solid black;
+    cursor: pointer;
+}
+.winningMessage .show{
+    display: flex;
+}
