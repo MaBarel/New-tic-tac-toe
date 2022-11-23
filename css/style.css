@@ -67,35 +67,36 @@ body{
     cursor: pointer;
 }
 
-.blockx, .blocko{
+.blockx, 
+.blocko{
     cursor: not-allowed;
 }
-.blockx::before,
-.blockx::after{
+.block.blockx::before,
+.block.blockx::after{
 content: "";
 width: 30px;
 position: absolute;
 height: 180px;
 background-color: black;
 }
-.blockx::before{
+.block.blockx::before{
     transform: rotate(45deg);
 }
-.blockx::after{
+.block.blockx::after{
     transform: rotate(-45deg);
 }
-.blocko::before,
-.blocko::after{
+.block.blocko::before,
+.block.blocko::after{
 content: "";
 border-radius: 50%;
 position: absolute;
 }
-.blocko::before{
+.block.blocko::before{
     width: 180px;
     height: 180px;
     background-color: black;
 }
-.blocko::after{
+.block.blocko::after{
     width: 140px;
     height: 140px;
     background-color: white;
@@ -111,20 +112,25 @@ position: absolute;
     justify-content: center;
     color: white;
     font-size: 5rem;
-    display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     font-size: 5rem;
     flex-direction: column;
 }
-.winningMessage button{
+.winningMessagebutton{
     font-size: 3rem;
     background-color: white;
-    content: "Restart";
     border: 1px solid black;
     cursor: pointer;
+    color:black;
+    content: "Restart";
 }
-.winningMessage .show{
+.winningMessage.show{
     display: flex;
+}
+.winningMessagebutton:hover{
+    background-color: black;
+    color: white;
+    border-color: white;
 }
