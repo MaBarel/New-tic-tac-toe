@@ -55,8 +55,8 @@ function checkWinner() {
         winningText.innerHTML = playerTwo.value + " wins";
         winningMessage.classList.add("show")
         scoreBoardO = scoreBoardO + 1;
+        pointBox2.innerHTML = "O points " + scoreBoardO;
         pointBox1.innerHTML = "X points " + scoreBoardX;
-        pointBox2.innerHTML = "O points " + scoreBoardX;
        } else if(counter === 9){ // if all 9 have been pressed it counts up
         winningText.innerHTML = "Draw";
         winningMessage.classList.add("show")
