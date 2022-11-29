@@ -1,32 +1,33 @@
 console.log("functions loaded");
-function startGame(){
+function startGame(){ //this function starts the game later used to restart the game
     blockElement.forEach(block =>{
-        block.classList.remove("blocko")
-        block.classList.remove("blockx")
-        block.removeEventListener("click", clickPressed)
+        block.classList.remove("blocko");
+        block.classList.remove("blockx");
+        block.removeEventListener("click", clickPressed);
         counter = 0
-        block.addEventListener('click', clickPressed, { once: true})
+        block.addEventListener('click', clickPressed, { once: true});
     });
-    winningMessage.classList.remove("show")
+    winningMessage.classList.remove("show");
 }
+//this is each individual block click
 function clickPressed(e){
-    const block = e.target
-    const XorO = turn ? O_Class : X_Class
-    console.log("clicked")
-    placeMark(block, XorO)
-    counter = counter + 1
+    const block = e.target;
+    const XorO = turn ? O_Class : X_Class;
+    console.log("clicked");
+    placeMark(block, XorO);
     checkWinner();
+    counter = counter + 1;
     flip();
 }
-
+//this function adds the X/O
 function placeMark(block, XorO){
     block.classList.add(XorO)
 } 
-
+//this function switches the X/O
 function flip(){
     turn = !turn
 }
-
+//this fucntion checks for winners using a array
 function checkWinner() {
     for (let i = 0; i < winningNumbas.length; i++) {
        const winnings = winningNumbas[i];
@@ -48,14 +49,12 @@ function checkWinner() {
         winningText.innerHTML = playerOne.value +  " wins";
         winningMessage.classList.add("show");
         scoreBoardX = scoreBoardX + 1;
-        scoreBoardO = scoreBoardO + 0;
         pointBox1.innerHTML = "X points " + scoreBoardX;
         pointBox2.innerHTML = "O points " + scoreBoardO;
         } else if(check1.classList.contains(O_Class) && check2.classList.contains(O_Class) && check3.classList.contains(O_Class)){
         winningText.innerHTML = playerTwo.value + " wins";
         winningMessage.classList.add("show")
         scoreBoardO = scoreBoardO + 1;
-        scoreBoardX = scoreBoardX + 0;
         pointBox1.innerHTML = "X points " + scoreBoardX;
         pointBox2.innerHTML = "O points " + scoreBoardX;
        } else if(counter === 9){ // if all 9 have been pressed it counts up
