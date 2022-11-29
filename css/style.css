@@ -134,3 +134,24 @@ position: absolute;
     color: white;
     border-color: white;
 }
+.inputbar{
+    width: 100px;
+}
+.point{
+    display: flex;
+    flex-direction: column;
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.resetpoint{
+    font-size: 40px;
+    background-color:  black;
+    cursor: pointer;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+.resetpoint:hover{
+    background-color: gray;
+}
