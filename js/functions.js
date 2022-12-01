@@ -68,5 +68,5 @@ function saved(){
     localStorage.setItem('playertwo', playerTwo.value);
 }
 function removed(){
-    localStorage.clear
+    localStorage.clear();
 }
