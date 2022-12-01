@@ -167,3 +167,15 @@ position: absolute;
     color: black;
     background-color: white;
 }
+.removesavebutton{
+    border: 3px solid black;
+    margin-top: 10px;
+    width: 102px;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+.removesavebutton:hover{
+    color: black;
+    background-color: white;
+}
