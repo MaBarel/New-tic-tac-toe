@@ -43,6 +43,7 @@ function checkWinner() {
        if(check1.classList.contains(X_Class) && check2.classList.contains(X_Class) && check3.classList.contains(X_Class)){
         winningText.innerHTML = localStorage.getItem("playerone") +  " wins";
         winningMessage.classList.add("show");
+        scoreBoardX = parseInt(Xhistory);
         scoreBoardX = scoreBoardX + 1;
         localStorage.setItem("Xpoints", scoreBoardX)
         pointBox1.innerHTML = "X points " + scoreBoardX;
@@ -50,6 +51,7 @@ function checkWinner() {
         } else if(check1.classList.contains(O_Class) && check2.classList.contains(O_Class) && check3.classList.contains(O_Class)){
         winningText.innerHTML = localStorage.getItem("playertwo") + " wins";
         winningMessage.classList.add("show")
+        scoreBoardO = parseInt(Ohistory);
         scoreBoardO = scoreBoardO + 1;
         localStorage.setItem("Opoints", scoreBoardO)
         pointBox2.innerHTML = "O points " + scoreBoardO;
@@ -60,7 +62,8 @@ function checkWinner() {
        }
     }
    }
-   function pressed(){
+//overige buttons
+function pressed(){
     startGame();
 }
 function saved(){
@@ -69,4 +72,5 @@ function saved(){
 }
 function removed(){
     localStorage.clear();
+    location.reload();
 }
