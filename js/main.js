@@ -21,14 +21,22 @@ const playerOne = document.querySelector(".player1");
 const playerTwo = document.querySelector(".player2");
 const pointBox1 = document.querySelector(".pointx");
 const pointBox2 = document.querySelector(".pointo");
+const saveButton = document.querySelector(".savebutton")
 let scoreBoardO = 0;
 let scoreBoardX = 0;
 let counter = 0;
+let Xhistory = localStorage.getItem('Xpoints');
+let Ohistory = localStorage.getItem('Opoints');
+
+if (isNaN(Xhistory.parseInt)) {
+    Xhistory = 0;
+}
 //Start game
 startGame();
+saveButton.addEventListener("click", saved)
 restartButton.addEventListener("click", pressed);
-pointBox1.innerHTML = "X points " + scoreBoardX;
-pointBox2.innerHTML = "O points " + scoreBoardO;
+pointBox1.innerHTML = "X points " + parseInt(Xhistory);
+pointBox2.innerHTML = "O points " + parseInt(Ohistory);
 
 
 

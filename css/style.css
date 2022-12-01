@@ -155,3 +155,15 @@ position: absolute;
 .resetpoint:hover{
     background-color: gray;
 }
+.savebutton{
+    border: 3px solid black;
+    margin-top: 10px;
+    width: 102px;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+.savebutton:hover{
+    color: black;
+    background-color: white;
+}

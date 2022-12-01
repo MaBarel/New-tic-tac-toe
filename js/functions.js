@@ -39,22 +39,19 @@ function checkWinner() {
        const check2 = blockElement[no2];
        const check3 = blockElement[no3];
 
-       console.log('new check');
-       console.log(check1);
-       console.log(check2);
-       console.log(check3);
-    
        //check that check1, check2 and check3 have the sameclasses
        if(check1.classList.contains(X_Class) && check2.classList.contains(X_Class) && check3.classList.contains(X_Class)){
-        winningText.innerHTML = playerOne.value +  " wins";
+        winningText.innerHTML = localStorage.getItem("playerone") +  " wins";
         winningMessage.classList.add("show");
         scoreBoardX = scoreBoardX + 1;
+        localStorage.setItem("Xpoints", scoreBoardX)
         pointBox1.innerHTML = "X points " + scoreBoardX;
         pointBox2.innerHTML = "O points " + scoreBoardO;
         } else if(check1.classList.contains(O_Class) && check2.classList.contains(O_Class) && check3.classList.contains(O_Class)){
-        winningText.innerHTML = playerTwo.value + " wins";
+        winningText.innerHTML = localStorage.getItem("playertwo") + " wins";
         winningMessage.classList.add("show")
         scoreBoardO = scoreBoardO + 1;
+        localStorage.setItem("Opoints", scoreBoardO)
         pointBox2.innerHTML = "O points " + scoreBoardO;
         pointBox1.innerHTML = "X points " + scoreBoardX;
        } else if(counter === 9){ // if all 9 have been pressed it counts up
@@ -65,5 +62,9 @@ function checkWinner() {
    }
    function pressed(){
     startGame();
+}
+function saved(){
+    localStorage.setItem('playerone', playerOne.value);
+    localStorage.setItem('playertwo', playerTwo.value);
 }
 
