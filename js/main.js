@@ -20,21 +20,29 @@ const playerOne = document.querySelector(".player1");
 const playerTwo = document.querySelector(".player2");
 const pointBox1 = document.querySelector(".pointx");
 const pointBox2 = document.querySelector(".pointo");
-const saveButton = document.querySelector(".savebutton")
-const removeSaveButton = document.querySelector(".removesavebutton")
+const saveButton = document.querySelector(".savebutton");
+const removeSaveButton = document.querySelector(".removesavebutton");
 let counter = 0;
 let Xhistory = localStorage.getItem('Xpoints');
 let Ohistory = localStorage.getItem('Opoints');
 let scoreBoardO = 0;
 let scoreBoardX = 0;
+scoreBoardX = parseInt(Xhistory);
+scoreBoardO = parseInt(Ohistory);
 let turn;
+if(Ohistory === null){
+    Ohistory = 0;
+}
+if(Xhistory === null){
+    Xhistory = 0;
+}
 if (isNaN(parseInt(Xhistory))) {
     Xhistory = 0;
 }
 if (isNaN(parseInt(Ohistory))) {
     Ohistory = 0;
 }
-//Start game
+//buttons and also start game function
 startGame();
 saveButton.addEventListener("click", saved);
 removeSaveButton.addEventListener("click", removed);
