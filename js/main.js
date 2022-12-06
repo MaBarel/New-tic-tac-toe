@@ -27,6 +27,7 @@ let Xhistory = localStorage.getItem('Xpoints');
 let Ohistory = localStorage.getItem('Opoints');
 let scoreBoardO = 0;
 let scoreBoardX = 0;
+let winLock = 0;
 scoreBoardX = parseInt(Xhistory);
 scoreBoardO = parseInt(Ohistory);
 let turn;

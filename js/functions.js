@@ -5,6 +5,7 @@ function startGame(){ //this function starts the game later used to restart the 
         block.classList.remove("blockx");
         block.removeEventListener("click", clickPressed);
         counter = 0
+        winLock = 0
         block.addEventListener('click', clickPressed, { once: true});
     });
     winningMessage.classList.remove("show");
@@ -45,6 +46,7 @@ function checkWinner() {
         winningText.innerHTML = localStorage.getItem("playerone") +  " wins";
         winningMessage.classList.add("show");
         scoreBoardX = scoreBoardX + 1;
+        winLock = 1;
         localStorage.setItem("Xpoints", scoreBoardX)
         if (isNaN(parseInt(scoreBoardO))) {
            scoreBoardO = 0;};
@@ -54,13 +56,12 @@ function checkWinner() {
         winningText.innerHTML = localStorage.getItem("playertwo") + " wins";
         winningMessage.classList.add("show")
         scoreBoardO = scoreBoardO + 1;
+        winLock = 1;
         localStorage.setItem("Opoints", scoreBoardO)
         if (isNaN(parseInt(scoreBoardX))) {
             scoreBoardX = 0;};
         pointBox2.innerHTML = "O points " + scoreBoardO;
         pointBox1.innerHTML = "X points " + scoreBoardX;
-       } else{
-        counter = counter + 1;
        }
     }
    }
@@ -77,8 +78,11 @@ function removed(){
     location.reload();
 }
 function DrawCheck(){
-    if(counter === 9){ // if all 9 have been pressed it counts up
+    counter = counter + 1;
+    console.log(winLock)
+    if(counter === 9 && winLock === 0){ // if all 9 have been pressed it counts up
         winningText.innerHTML = "Draw";
         winningMessage.classList.add("show")
+        console.log(winLock)
     }
 }
