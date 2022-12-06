@@ -15,7 +15,6 @@ function clickPressed(e){
     const XorO = turn ? O_Class : X_Class;
     console.log("clicked");
     placeMark(block, XorO);
-    counter = counter + 1;
     checkWinner();
     DrawCheck();
     flip();
@@ -60,6 +59,8 @@ function checkWinner() {
             scoreBoardX = 0;};
         pointBox2.innerHTML = "O points " + scoreBoardO;
         pointBox1.innerHTML = "X points " + scoreBoardX;
+       } else{
+        counter = counter + 1;
        }
     }
    }
