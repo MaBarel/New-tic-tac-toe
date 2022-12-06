@@ -15,9 +15,11 @@ function clickPressed(e){
     const XorO = turn ? O_Class : X_Class;
     console.log("clicked");
     placeMark(block, XorO);
-    checkWinner();
     counter = counter + 1;
+    checkWinner();
+    DrawCheck();
     flip();
+    console.log(counter)
 }
 //this function adds the X/O
 function placeMark(block, XorO){
@@ -46,7 +48,7 @@ function checkWinner() {
         scoreBoardX = scoreBoardX + 1;
         localStorage.setItem("Xpoints", scoreBoardX)
         if (isNaN(parseInt(scoreBoardO))) {
-           scoreBoardO = 0;}
+           scoreBoardO = 0;};
         pointBox1.innerHTML = "X points " + scoreBoardX;
         pointBox2.innerHTML = "O points " + scoreBoardO;
         } else if(check1.classList.contains(O_Class) && check2.classList.contains(O_Class) && check3.classList.contains(O_Class)){
@@ -55,12 +57,9 @@ function checkWinner() {
         scoreBoardO = scoreBoardO + 1;
         localStorage.setItem("Opoints", scoreBoardO)
         if (isNaN(parseInt(scoreBoardX))) {
-            scoreBoardX = 0;}
+            scoreBoardX = 0;};
         pointBox2.innerHTML = "O points " + scoreBoardO;
         pointBox1.innerHTML = "X points " + scoreBoardX;
-       } else if(counter === 9){ // if all 9 have been pressed it counts up
-        winningText.innerHTML = "Draw";
-        winningMessage.classList.add("show")
        }
     }
    }
@@ -75,4 +74,10 @@ function saved(){
 function removed(){
     localStorage.clear();
     location.reload();
+}
+function DrawCheck(){
+    if(counter === 9){ // if all 9 have been pressed it counts up
+        winningText.innerHTML = "Draw";
+        winningMessage.classList.add("show")
+    }
 }
