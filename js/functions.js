@@ -19,7 +19,6 @@ function clickPressed(e){
     checkWinner();
     DrawCheck();
     flip();
-    console.log(counter)
 }
 //this function adds the X/O
 function placeMark(block, XorO){
@@ -46,22 +45,24 @@ function checkWinner() {
         winningText.innerHTML = localStorage.getItem("playerone") +  " wins";
         winningMessage.classList.add("show");
         scoreBoardX = scoreBoardX + 1;
-        winLock = 1;
         localStorage.setItem("Xpoints", scoreBoardX)
-        if (isNaN(parseInt(scoreBoardO))) {
+        if (isNaN(scoreBoardO)) {
            scoreBoardO = 0;};
         pointBox1.innerHTML = "X points " + scoreBoardX;
         pointBox2.innerHTML = "O points " + scoreBoardO;
+        winLock = 1;
         } else if(check1.classList.contains(O_Class) && check2.classList.contains(O_Class) && check3.classList.contains(O_Class)){
         winningText.innerHTML = localStorage.getItem("playertwo") + " wins";
         winningMessage.classList.add("show")
         scoreBoardO = scoreBoardO + 1;
-        winLock = 1;
         localStorage.setItem("Opoints", scoreBoardO)
         if (isNaN(parseInt(scoreBoardX))) {
             scoreBoardX = 0;};
         pointBox2.innerHTML = "O points " + scoreBoardO;
         pointBox1.innerHTML = "X points " + scoreBoardX;
+        //for some reason this works when its being read out by .log
+        
+        winLock = 1;
        }
     }
    }
@@ -70,6 +71,8 @@ function pressed(){
     startGame();
 }
 function saved(){
+    localStorage.setItem("Opoints", scoreBoardO)
+    localStorage.setItem("Xpoints", scoreBoardX)
     localStorage.setItem('playerone', playerOne.value);
     localStorage.setItem('playertwo', playerTwo.value);
 }
