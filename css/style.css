@@ -179,3 +179,63 @@ position: absolute;
     color: black;
     background-color: white;
 }
+.startscreen{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .9);
+    justify-content: center;
+    color: white;
+    font-size: 5rem;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5rem;
+    flex-direction: column;
+    gap: 10px;
+}
+.startscreen.show{
+    display: flex;
+}
+.startpvp{
+    text-align: center;
+    width: 180px;
+    font-size: 3rem;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    color:black;
+}
+.startpvp:hover{
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+.startpve{
+    text-align: center;
+    width: 180px;
+    font-size: 3rem;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    color:black;
+}
+.startpve:hover{
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+.winningMessagebuttontwo{
+    font-size: 3rem;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    color:black;
+    content: "Restart";
+}
+.highlight{
+    background-color: green;
+}
