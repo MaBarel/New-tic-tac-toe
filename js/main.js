@@ -3,14 +3,14 @@ console.log("main loaded");
 const X_Class = "blockx";
 const O_Class = "blocko";
 const winningNumbas = [
-[0,1,2],
-[3,4,5],
-[6,7,8],
-[0,3,6],
-[1,4,7],
-[2,5,8],
-[0,4,8],
-[2,4,6]
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6]
 ];
 const winningText = document.querySelector(".winningText");
 const winningText2 = document.querySelector(".winningTexttwo")
@@ -43,23 +43,24 @@ let oWin = false;
 let xWin = false;
 let botWin = false;
 let playerWin = false;
-let lock = false; 
-if(localStorage.getItem("playerone") === null){
+let lock = false;
+let rdmBotPacement = true;
+if (localStorage.getItem("playerone") === null) {
     localStorage.setItem("playerone", "Player X")
 }
-if(localStorage.getItem("playertwo") === null){
+if (localStorage.getItem("playertwo") === null) {
     localStorage.setItem("playertwo", "Player O")
 }
-if(Ohistory === null){
+if (Ohistory === null) {
     Ohistory = 0;
 }
-if(Xhistory === null){
+if (Xhistory === null) {
     Xhistory = 0;
 }
-if(playerHistory === null){
-   playerHistory = 0;
+if (playerHistory === null) {
+    playerHistory = 0;
 }
-if(botHistory === null){
+if (botHistory === null) {
     botHistory = 0;
 }
 

@@ -1,65 +1,77 @@
-.wrapper{
+.wrapper {
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(4, 200px) ;
+    grid-template-columns: repeat(4, 200px);
     grid-template-rows: repeat(3, 200px);
     gap: 10px;
     justify-content: center;
 }
+
 .block1 {
     background-color: white;
     grid-column: 2/2;
     grid-row: 1/1;
 }
+
 .block2 {
-    background-color:white;
+    background-color: white;
     grid-column: 3/3;
     grid-row: 1/1;
 }
+
 .block3 {
     background-color: white;
     grid-column: 4/4;
     grid-row: 1/1;
 }
+
 .block4 {
     background-color: white;
     grid-column: 2/2;
     grid-row: 2/2;
 }
+
 .block5 {
     background-color: white;
     grid-column: 3/3;
     grid-row: 2/2;
 }
+
 .block6 {
     background-color: white;
     grid-column: 4/4;
     grid-row: 2/2;
 }
+
 .block7 {
     background-color: white;
     grid-column: 2/2;
     grid-row: 3/3;
 }
+
 .block8 {
     background-color: white;
     grid-column: 3/3;
     grid-row: 3/3;
 }
+
 .block9 {
     background-color: #ffffff;
     grid-column: 4/4;
     grid-row: 3/3;
 }
-body{
+
+body {
     background-color: black;
 }
-.sidebar{
+
+.sidebar {
     background-color: white;
     grid-column: 1/2;
     grid-row: 1/4;
 }
-.block{
+
+.block {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,41 +79,48 @@ body{
     cursor: pointer;
 }
 
-.blockx, 
-.blocko{
+.blockx,
+.blocko {
     cursor: not-allowed;
 }
+
 .block.blockx::before,
-.block.blockx::after{
-content: "";
-width: 30px;
-position: absolute;
-height: 180px;
-background-color: black;
+.block.blockx::after {
+    content: "";
+    width: 30px;
+    position: absolute;
+    height: 180px;
+    background-color: black;
 }
-.block.blockx::before{
+
+.block.blockx::before {
     transform: rotate(45deg);
 }
-.block.blockx::after{
+
+.block.blockx::after {
     transform: rotate(-45deg);
 }
+
 .block.blocko::before,
-.block.blocko::after{
-content: "";
-border-radius: 50%;
-position: absolute;
+.block.blocko::after {
+    content: "";
+    border-radius: 50%;
+    position: absolute;
 }
-.block.blocko::before{
+
+.block.blocko::before {
     width: 180px;
     height: 180px;
     background-color: black;
 }
-.block.blocko::after{
+
+.block.blocko::after {
     width: 140px;
     height: 140px;
     background-color: white;
 }
-.winningMessage{
+
+.winningMessage {
     display: none;
     position: fixed;
     top: 0;
@@ -118,44 +137,52 @@ position: absolute;
     font-size: 5rem;
     flex-direction: column;
 }
-.winningMessagebutton{
+
+.winningMessagebutton {
     font-size: 3rem;
     background-color: white;
     border: 1px solid black;
     cursor: pointer;
-    color:black;
+    color: black;
     content: "Restart";
 }
-.winningMessage.show{
+
+.winningMessage.show {
     display: flex;
 }
-.winningMessagebutton:hover{
+
+.winningMessagebutton:hover {
     background-color: black;
     color: white;
     border-color: white;
 }
-.inputbar{
+
+.inputbar {
     width: 100px;
 }
-.point{
+
+.point {
     display: flex;
     flex-direction: column;
     font-size: 40px;
     justify-content: center;
     align-items: center;
 }
-.resetpoint{
+
+.resetpoint {
     font-size: 40px;
-    background-color:  black;
+    background-color: black;
     cursor: pointer;
     color: white;
     justify-content: center;
     align-items: center;
 }
-.resetpoint:hover{
+
+.resetpoint:hover {
     background-color: gray;
 }
-.savebutton{
+
+.savebutton {
     border: 3px solid black;
     margin-top: 10px;
     width: 102px;
@@ -163,11 +190,13 @@ position: absolute;
     color: white;
     background-color: black;
 }
-.savebutton:hover{
+
+.savebutton:hover {
     color: black;
     background-color: white;
 }
-.removesavebutton{
+
+.removesavebutton {
     border: 3px solid black;
     margin-top: 10px;
     width: 102px;
@@ -175,11 +204,13 @@ position: absolute;
     color: white;
     background-color: black;
 }
-.removesavebutton:hover{
+
+.removesavebutton:hover {
     color: black;
     background-color: white;
 }
-.startscreen{
+
+.startscreen {
     display: none;
     position: fixed;
     top: 0;
@@ -197,45 +228,52 @@ position: absolute;
     flex-direction: column;
     gap: 10px;
 }
-.startscreen.show{
+
+.startscreen.show {
     display: flex;
 }
-.startpvp{
+
+.startpvp {
     text-align: center;
     width: 180px;
     font-size: 3rem;
     background-color: white;
     border: 1px solid black;
     cursor: pointer;
-    color:black;
+    color: black;
 }
-.startpvp:hover{
+
+.startpvp:hover {
     background-color: black;
     color: white;
     border-color: white;
 }
-.startpve{
+
+.startpve {
     text-align: center;
     width: 180px;
     font-size: 3rem;
     background-color: white;
     border: 1px solid black;
     cursor: pointer;
-    color:black;
+    color: black;
 }
-.startpve:hover{
+
+.startpve:hover {
     background-color: black;
     color: white;
     border-color: white;
 }
-.winningMessagebuttontwo{
+
+.winningMessagebuttontwo {
     font-size: 3rem;
     background-color: white;
     border: 1px solid black;
     cursor: pointer;
-    color:black;
+    color: black;
     content: "Restart";
 }
-.highlight{
+
+.highlight {
     background-color: green;
 }
