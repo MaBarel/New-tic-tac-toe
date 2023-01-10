@@ -42,7 +42,8 @@ let turn;
 let oWin = false;
 let xWin = false;
 let botWin = false;
-let playerWin = false; 
+let playerWin = false;
+let lock = false; 
 if(localStorage.getItem("playerone") === null){
     localStorage.setItem("playerone", "Player X")
 }
@@ -64,8 +65,8 @@ if(botHistory === null){
 
 scoreBoardX = parseInt(Xhistory);
 scoreBoardO = parseInt(Ohistory);
-// scoreBoardP = parseint(playerHistory);
-// scoreBoardB = parseInt(botHistory);
+scoreBoardP = parseInt(playerHistory);
+scoreBoardB = parseInt(botHistory);
 //buttons and also start game function
 startscreen.classList.add("show");
 startpvp.addEventListener("click", started);
