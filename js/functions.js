@@ -153,21 +153,34 @@ function bot() {
         const check1 = blockElement[no1];
         const check2 = blockElement[no2];
         const check3 = blockElement[no3];
-        console.log(i)
 
+        if (check3.classList.contains(O_Class) && check2.classList.contains(O_Class) && lock === false &&
+            !check1.classList.contains(X_Class) && !check1.classList.contains(O_Class)) {
+            check1.classList.add(O_Class);
+            check1.removeEventListener("click", clickPressed2);
+            lock = true;
+        } else if (check1.classList.contains(O_Class) && check3.classList.contains(O_Class) && lock === false &&
+            !check2.classList.contains(X_Class) && !check2.classList.contains(O_Class)) {
+            check2.classList.add(O_Class);
+            check2.removeEventListener("click", clickPressed2);
+            lock = true;
+        } else if (check1.classList.contains(O_Class) && check2.classList.contains(O_Class) && lock === false &&
+            !check3.classList.contains(X_Class) && !check3.classList.contains(O_Class)) {
+            check3.classList.add(O_Class);
+            check3.removeEventListener("click", clickPressed2);
+            lock = true;
+        } 
         if (check3.classList.contains(X_Class) && check2.classList.contains(X_Class) && lock === false &&
             !check1.classList.contains(X_Class) && !check1.classList.contains(O_Class)) {
             check1.classList.add(O_Class);
             check1.removeEventListener("click", clickPressed2);
             lock = true;
-        }
-        if (check1.classList.contains(X_Class) && check3.classList.contains(X_Class) && lock === false &&
+        } else if (check1.classList.contains(X_Class) && check3.classList.contains(X_Class) && lock === false &&
             !check2.classList.contains(X_Class) && !check2.classList.contains(O_Class)) {
             check2.classList.add(O_Class);
             check2.removeEventListener("click", clickPressed2);
             lock = true;
-        }
-        if (check1.classList.contains(X_Class) && check2.classList.contains(X_Class) && lock === false &&
+        } else if (check1.classList.contains(X_Class) && check2.classList.contains(X_Class) && lock === false &&
             !check3.classList.contains(X_Class) && !check3.classList.contains(O_Class)) {
             check3.classList.add(O_Class);
             check3.removeEventListener("click", clickPressed2);
