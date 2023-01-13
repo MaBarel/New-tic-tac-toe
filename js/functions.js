@@ -170,6 +170,17 @@ function bot() {
             check3.removeEventListener("click", clickPressed2);
             lock = true;
         } 
+    }
+    for (let i = 0; i < winningNumbas.length; i++) {
+        const winnings = winningNumbas[i];
+        const no1 = winnings[0];
+        const no2 = winnings[1];
+        const no3 = winnings[2];
+
+        const check1 = blockElement[no1];
+        const check2 = blockElement[no2];
+        const check3 = blockElement[no3];
+
         if (check3.classList.contains(X_Class) && check2.classList.contains(X_Class) && lock === false &&
             !check1.classList.contains(X_Class) && !check1.classList.contains(O_Class)) {
             check1.classList.add(O_Class);
@@ -186,6 +197,7 @@ function bot() {
             check3.removeEventListener("click", clickPressed2);
             lock = true;
         }
+
         if (check1.classList.contains(O_Class) && check2.classList.contains(O_Class) && check3.classList.contains(O_Class)) {
             winningText2.innerHTML = "Computer" + " wins";
             winningMessage2.classList.add("show")
